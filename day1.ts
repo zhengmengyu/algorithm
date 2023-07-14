@@ -16,10 +16,10 @@
 右侧数之和 sum = nums[4] + nums[5] = 5 + 6 = 11 ，二者相等。
 */
 
-var pivotIndex = function(nums) {
-    let total = nums.reduce((a,b) => a + b, 0);
-    let sum = 0;
-    for(let i = 0; i < nums.length; i++) {
+var pivotIndex = function(nums: number[]) {
+    let total: number = nums.reduce((a:number,b:number) => a + b, 0);
+    let sum: number = 0;
+    for(let i:number = 0; i < nums.length; i++) {
         if(sum * 2 + nums[i] === total) return i;
         sum += nums[i];
     }
